@@ -11,4 +11,12 @@ class BackendController extends Controller
     {
         return view('backend.login');
     }
+    public function forgot_password()
+    {
+        return view('backend.forgot-password');
+    }
+    public function index()
+    {
+        return view('backend.index');
+    }
 }

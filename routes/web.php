@@ -12,6 +12,8 @@ Route::get('/checkout', [FrontendController::class, 'checkout'])->name('frontend
 Route::get('/detail', [FrontendController::class, 'detail'])->name('frontend.detail');
 Route::get('/shop', [FrontendController::class, 'shop'])->name('frontend.shop');
 Route::get('/admin/login', [BackendController::class, 'login'])->name('backend.login');
+Route::get('/admin/forgot-password', [BackendController::class, 'forgot_password'])->name('backend.forgot_password');
+Route::get('/admin/index', [BackendController::class, 'index'])->name('backend.index');
 
 Auth::routes();
 
