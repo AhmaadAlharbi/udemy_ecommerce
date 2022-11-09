@@ -17,13 +17,15 @@ return new class extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('mobile')->unique();
-            $table->string('user_image')->nullable();
-            $table->unsignedTinyInteger('status')->default(0);
+            $table->string('username')->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('mobile')->unique();
             $table->string('password');
+            $table->string('user_image')->nullable();
+            $table->unsignedTinyInteger('status')->default(0);
             $table->rememberToken();
+            $table->boolean('receive_emails')->default(true);
             $table->timestamps();
         });
     }

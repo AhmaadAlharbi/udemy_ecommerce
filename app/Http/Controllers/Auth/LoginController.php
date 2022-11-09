@@ -33,8 +33,19 @@ class LoginController extends Controller
      *
      * @return void
      */
+
+    public function username()
+    {
+        return 'username';
+    }
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+    public function redirectTo()
+    {
+        if (auth()->user()->roles()->first()->allowed_route != '') {
+            return $this->redirectTo = auth()->user()->roles()->first()->allowed_route . '/index';
+        }
     }
 }
