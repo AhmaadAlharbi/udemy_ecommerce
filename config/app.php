@@ -189,6 +189,8 @@ return [
         /*
          * Application Service Providers...
          */
+        Mindscms\Entrust\EntrustServiceProvider::class,
+
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
